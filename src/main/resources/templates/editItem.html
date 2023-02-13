@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Item</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Edit item</h1>
+<div>
+    <form action="#" th:action="@{/save}" th:object="${item}" method="post" class="was-validated form-control">
+        <input type="hidden" th:field="*{id}">
+        <label for="title" class="form-label">Title: </label>
+        <input type="text" th:field="*{title}" id="title" class="form-text">
+        <label for="content" class="form-label">Content:</label>
+        <input type="text" class="form-text" th:field="*{content}" id="content">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
